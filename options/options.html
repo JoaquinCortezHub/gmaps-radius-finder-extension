@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Configuración — Cerca en Maps</title>
+    <link rel="stylesheet" href="../styles/base.css">
+    <link rel="stylesheet" href="options.css">
+  </head>
+  <body>
+    <main>
+      <header>
+        <p class="eyebrow">Cerca en Maps</p>
+        <h1>Configuración</h1>
+        <p>Administrá las categorías y ubicaciones que quedan guardadas solamente en este Firefox.</p>
+      </header>
+
+      <section aria-labelledby="categories-title">
+        <div class="section-heading">
+          <div><h2 id="categories-title">Categorías</h2><p class="muted">El nombre se muestra en el popup; el término se envía a Maps.</p></div>
+        </div>
+        <form id="category-form" class="add-form">
+          <label>Nombre<input id="category-name" maxlength="60" required placeholder="Ej.: Ferreterías"></label>
+          <label>Término de búsqueda<input id="category-query" maxlength="100" required placeholder="Ej.: ferreterías"></label>
+          <button class="primary" type="submit">Agregar categoría</button>
+        </form>
+        <div id="categories" class="item-list"></div>
+      </section>
+
+      <section aria-labelledby="favorites-title">
+        <div class="section-heading">
+          <div><h2 id="favorites-title">Favoritos</h2><p class="muted">Podés guardar direcciones, lugares, coordenadas o URLs oficiales de Google Maps.</p></div>
+        </div>
+        <form id="favorite-form" class="add-form favorite-form">
+          <label>Nombre<input id="favorite-name" maxlength="60" required placeholder="Ej.: Casa"></label>
+          <label>Ubicación<input id="favorite-location" maxlength="500" required placeholder="Ej.: Godoy Cruz, Mendoza"></label>
+          <button class="primary" type="submit">Agregar favorito</button>
+        </form>
+        <div id="favorites" class="item-list"></div>
+      </section>
+
+      <section class="danger-zone" aria-labelledby="data-title">
+        <h2 id="data-title">Datos locales</h2>
+        <p class="muted">Esto elimina categorías, favoritos y la última ubicación, y restaura las categorías iniciales.</p>
+        <button id="delete-all" class="danger" type="button">Borrar todos los datos</button>
+      </section>
+      <p id="status" class="status" role="status" aria-live="polite"></p>
+    </main>
+    <script type="module" src="options.js"></script>
+  </body>
+</html>

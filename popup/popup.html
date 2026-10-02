@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cerca en Maps</title>
+    <link rel="stylesheet" href="../styles/base.css">
+    <link rel="stylesheet" href="popup.css">
+  </head>
+  <body>
+    <main>
+      <header>
+        <div>
+          <p class="eyebrow">Google Maps</p>
+          <h1>Cerca en Maps</h1>
+        </div>
+        <button id="open-options" class="icon-button" type="button" aria-label="Abrir configuración" title="Configuración">⚙</button>
+      </header>
+
+      <section aria-labelledby="location-title">
+        <h2 id="location-title">Ubicación</h2>
+        <label class="sr-only" for="location">Dirección, lugar, coordenadas o URL de Google Maps</label>
+        <textarea id="location" maxlength="500" rows="3" placeholder="Ej.: Plaza Independencia, Mendoza"></textarea>
+        <div class="button-row location-actions">
+          <button id="take-location" type="button">Tomar de Google Maps</button>
+          <button id="clear-location" type="button">Borrar</button>
+        </div>
+        <label class="favorite-label" for="favorite">Favoritos</label>
+        <select id="favorite">
+          <option value="">Elegir un favorito…</option>
+        </select>
+        <div id="approximate-box" class="approximate" hidden>
+          <strong>Ubicación aproximada</strong>
+          <span>Estas coordenadas corresponden al centro visible del mapa.</span>
+          <label><input id="confirm-approximate" type="checkbox"> Confirmé visualmente la ubicación</label>
+        </div>
+        <p id="status" class="status" role="status" aria-live="polite"></p>
+      </section>
+
+      <section aria-labelledby="categories-title">
+        <div class="section-heading">
+          <h2 id="categories-title">Categorías</h2>
+          <button id="toggle-all" class="text-button" type="button">Seleccionar todas</button>
+        </div>
+        <div id="categories" class="categories"></div>
+      </section>
+
+      <button id="open-selected" class="primary full-width" type="button">Abrir seleccionadas</button>
+      <p class="privacy-note">Solo se envían la ubicación y los términos cuando abrís una búsqueda en Google Maps.</p>
+    </main>
+    <script type="module" src="popup.js"></script>
+  </body>
+</html>

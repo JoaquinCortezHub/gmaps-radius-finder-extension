@@ -1,0 +1,31 @@
+{
+  "manifest_version": 3,
+  "name": "Cerca en Maps",
+  "version": "0.1.0",
+  "description": "Busca categorias cerca de una ubicacion usando Google Maps, sin API key.",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "storage"
+  ],
+  "action": {
+    "default_title": "Cerca en Maps",
+    "default_popup": "popup/popup.html"
+  },
+  "options_ui": {
+    "page": "options/options.html",
+    "open_in_tab": true
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "cerca-en-maps@local.jhaycortez",
+      "strict_min_version": "140.0",
+      "data_collection_permissions": {
+        "required": [
+          "locationInfo",
+          "searchTerms"
+        ]
+      }
+    }
+  }
+}

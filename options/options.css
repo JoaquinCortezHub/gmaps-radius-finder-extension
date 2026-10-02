@@ -1,0 +1,25 @@
+body { min-width: 320px; }
+main { width: min(920px, calc(100% - 32px)); margin: 0 auto; padding: 34px 0 60px; }
+header { margin-bottom: 28px; }
+h1 { margin: 3px 0 8px; font-size: 30px; }
+h2 { margin: 0 0 6px; font-size: 19px; }
+header p { margin: 0; color: var(--muted); }
+.eyebrow { color: var(--primary); font-size: 12px; font-weight: 750; letter-spacing: .09em; text-transform: uppercase; }
+section { margin-top: 20px; padding: 22px; border: 1px solid var(--border); border-radius: 13px; background: var(--surface); }
+.section-heading p { margin: 0; }
+.add-form { display: grid; grid-template-columns: 1fr 1.5fr auto; align-items: end; gap: 10px; margin: 18px 0; }
+.add-form label { display: grid; gap: 6px; font-size: 12px; }
+.item-list { display: grid; gap: 8px; }
+.item { display: grid; grid-template-columns: minmax(130px, 1fr) minmax(180px, 1.6fr) auto; align-items: center; gap: 8px; padding: 9px; border: 1px solid var(--border); border-radius: 9px; }
+.item-controls { display: flex; align-items: center; justify-content: flex-end; gap: 5px; }
+.item-controls label { display: flex; align-items: center; gap: 5px; margin-right: 5px; font-size: 12px; font-weight: 500; }
+.item-controls input { width: auto; }
+.item-controls button { padding: 7px 9px; }
+.danger-zone { border-color: color-mix(in srgb, var(--danger) 35%, var(--border)); }
+.status:not(:empty) { position: sticky; bottom: 10px; padding: 8px; border-radius: 8px; background: var(--bg); }
+.status:empty { display: none; }
+
+@media (max-width: 720px) {
+  .add-form, .item { grid-template-columns: 1fr; }
+  .item-controls { justify-content: flex-start; flex-wrap: wrap; }
+}

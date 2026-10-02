@@ -1,0 +1,17 @@
+{
+  "name": "cerca-en-maps-firefox",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Extension privada de Firefox para buscar categorias cerca de una ubicacion en Google Maps.",
+  "scripts": {
+    "test": "node --test",
+    "lint": "web-ext lint --source-dir . --ignore-files package-lock.json package.json README.md PRIVACY.md tests/**",
+    "build": "web-ext build --source-dir . --artifacts-dir ../cerca-en-maps-artifacts --overwrite-dest --ignore-files package-lock.json package.json README.md PRIVACY.md tests/**",
+    "sign": "web-ext sign --source-dir . --artifacts-dir ../cerca-en-maps-artifacts --channel=unlisted --ignore-files package-lock.json package.json README.md PRIVACY.md tests/**",
+    "start": "web-ext run --source-dir . --firefox-profile=dev-cerca-en-maps"
+  },
+  "devDependencies": {
+    "web-ext": "^10.7.0"
+  }
+}
